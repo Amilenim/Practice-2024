@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя ознайомча практика</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/scripts.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <h2>Моя Ознайомча практика 2024</h2>
+        <div class="navbar">
+            <div class="button">
+                <button type="button" class="btn btn-dark" onclick="location.href='/index.html'">Головна</button>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 1
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc1.1.html">Завдання 1.1</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.2.html">Завдання 1.2</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.3.html">Завдання 1.3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 2
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc2.1.html">Теорія</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.2.html">Програма</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.3.html">Тестування</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <h2>Завдання 1.2</h2>
+        <p>Знайти за допомогою Scilab корінь рівняння чисельно і, якщо це можливо, аналітично. Виконати перевірку отриманого результату у MS Excel. Результати порівняти.</p>
+        <p class="text">
+            <b>ВАРІАНТ 2 <br><br></b> Функція: <br><br> \[y = 3*x - cos(x) - 1\]
+        </p>
+
+        <p>Код Scilab:</p>
+
+        <div class="func">
+            <p>1.2.sce</p>
+            <div class="func-container">
+                <pre><code class="language-c#">
+    function y = myFunction(x)
+    y = 3*x - cos(x) - 1;
+    endfunction
+    
+    x0 = 1;
+    
+    x_solution = fsolve(x0, myFunction);
+    
+    disp("Відповідь: ");
+    disp(x_solution);
+                </code></pre>
+            </div>
+        </div>
+
+        <p>Результат виконання програми у Scilab (рисунок 4):</p>
+
+        <div class="media">
+            <a><img src="./media/1/1.2/1.2_1.png"></a>
+            <p>Рисунок 4 - Вивід відповіді у середовище Scilab</p>
+        </div>
+
+        <p>Результат виконання роботи в Excel (рисунок 5):</p>
+
+        <div class="media">
+            <a><img src="./media/1/1.2/1.2_2.png"></a>
+            <p>Рисунок 5 - Таблиця Excel</p>
+        </div>
+
+        <p><b>Висновок</b></p>
+        <p>Порівнюючи отримані результаті у Scilab та Excel, відповідь майже ідентична в обох випадках. Похибка становить: 0,00002</p>
+    </section>
+
+    <section class="footer">
+        <a><img src="./media/6fac.png"></a>
+        <a><img src="./media/khai.png"></a>
+    </section>
+</body>
+
+</html>

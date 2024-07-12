@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя ознайомча практика</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/scripts.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <h2>Моя Ознайомча практика 2024</h2>
+        <div class="navbar">
+            <div class="button">
+                <button type="button" class="btn btn-dark" onclick="location.href='/index.html'">Головна</button>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 1
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc1.1.html">Завдання 1.1</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.2.html">Завдання 1.2</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.3.html">Завдання 1.3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 2
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc2.1.html">Теорія</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.2.html">Програма</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.3.html">Тестування</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <h2>Завдання 1.3</h2>
+        <p>Знайти за допомогою Scilab чисельне рішення системи. Виконати перевірку отриманого результату у MS Excel.
+            Результати порівняти.</p>
+        <p class="text">
+            <b>ВАРІАНТ 2 <br><br></b> Функція: <br><br>
+            \begin{cases}
+            x = 0.25 (x^2 - y^2) - x^2 y^2 + 0.5 \\
+            y = xy (x^2 - y^2) + 0.5
+            \end{cases}
+        </p>
+
+        <p>Код Scilab:</p>
+
+        <div class="func">
+            <p>1.2.sce</p>
+            <div class="func-container">
+                <pre><code class="language-c#">
+    function [x_next, y_next] = simple_iteration(x, y)
+    x_next = 0.25*(x^2 - y^2) - x^2*y^2 + 0.5;
+    y_next = x*y*(x^2 - y^2)+0.5;
+    endfunction
+
+    function [x_sol, y_sol] = simple_iterative_method(x0, y0, max_iter, tol)
+
+    x = x0;
+    y = y0;
+
+    for iter = 1:max_iter
+    [x_next, y_next] = simple_iteration(x, y);
+    if norm([x_next - x; y_next - y]) < tol
+        break;
+        end
+        x = x_next;
+        y = y_next;
+        end
+
+        x_sol = x;
+        y_sol = y;
+        endfunction
+
+        max_iterations = 100;
+        tolerance = 1e-6;
+
+        x0 = 1;
+        y0 = 1;
+
+        [x_solution, y_solution] = simple_iterative_method(0, 0, max_iterations, tolerance);
+
+        disp(['Відповідь:']);
+        disp(['x = ', string(x_solution)]);
+        disp(['y = ', string(y_solution)]);
+                </code></pre>
+            </div>
+        </div>
+
+        <p>Результат виконання програми у Scilab (рисунок 6):</p>
+
+        <div class="media">
+            <a><img src="./media/1/1.3/1.3_1.png"></a>
+            <p>Рисунок 6 - Вивід відповіді у середовище Scilab</p>
+        </div>
+
+        <p>Результат роботи програми та порівняння результатів в Excel (рисунок 7):</p>
+
+        <div class="media">
+            <a><img src="./media/1/1.3/1.3_2.png"></a>
+            <p>Рисунок 7 - Вивід відповіді у середовище Scilab</p>
+        </div>
+
+        <p><b>Висновок</b></p>
+        <p>Порівнюючи отримані результаті у Scilab та Excel, відповідь майже ідентична в обох випадках. Похибка для <b>x</b> становить (0,941809) а для <b>y</b> (0,009774)</p>
+    </section>
+
+    <section class="footer">
+        <a><img src="./media/6fac.png"></a>
+        <a><img src="./media/khai.png"></a>
+    </section>
+</body>
+
+</html>

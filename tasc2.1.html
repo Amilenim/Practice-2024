@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя ознайомча практика</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/scripts.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <h2>Моя Ознайомча практика 2024</h2>
+        <div class="navbar">
+            <div class="button">
+                <button type="button" class="btn btn-dark" onclick="location.href='/index.html'">Головна</button>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 1
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc1.1.html">Завдання 1.1</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.2.html">Завдання 1.2</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.3.html">Завдання 1.3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 2
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc2.1.html">Теорія</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.2.html">Програма</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.3.html">Тестування</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <h2>Завдання 2</h2>
+        <p>Ознайомитися з одним із чисельних методів (таблиця 1) та виконати його реалізацію мовою
+            програмування високого рівня (за винятком Basic, Pascal, Fortran), засобами програмування
+            Scilab та перевірити правильність отриманих програмних рішень за допомогою інших засобів Scilab.</p>
+        <p class="text"> <b>ВАРІАНТ 2 <br><br></b></p>
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Чисельний метод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Метод дихотомії обчислити один із коренів рівняння \( f(x) = 0 \) з точністю \( \varepsilon =
+                        10^{-6} \)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">№ варіанта Чисельний метод Нелінійне рівняння
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">\( x^3-3*x^2+3=0 \)</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="text"> <b>ТЕОРЕТИЧНА ЧАСТИНА<br><br></b></p>
+
+        <div>
+            <p>Метод дихотомії (або метод бісекції) використовується для знаходження коренів неперервної функції \( f(x)
+                \)
+                на відрізку \([a, b]\). Його основні кроки:</p>
+
+            <p>Початкова перевірка: Вибираються точки \( a \) і \( b \) так, щоб \( f(a) \) і \( f(b) \) мали різні
+                знаки (\( f(a) \cdot f(b) < 0 \)).</p>
+                    <p>Обчислення середньої точки: Знаходиться середня точка \( c \) інтервалу (\( c = \frac{a +
+                        b}{2} \)).</p>
+                    <p>Оцінка значення функції в \( c \):
+                    <ul>
+                        <p>Якщо \( f(c) = 0 \), то \( c \) — корінь.</p>
+                        <p>Якщо \( f(a) \cdot f(c) < 0 \), то новий інтервал \([a, c]\).</p>
+                                <p>Якщо \( f(b) \cdot f(c) < 0 \), то новий інтервал \([c, b]\).</p>
+                    </ul>
+            </p>
+            <p>Зменшення інтервалу: Процедура повторюється, поки довжина інтервалу не стане меншою за задану точність
+                \( \varepsilon \).</p>
+        </div>
+
+        <div class="media">
+            <a><img src="./media/diagram.png"></a>
+            <p>Рисунок 1 - Блок-схема методу дихотомії</p>
+        </div>
+    </section>
+
+    <section class="footer">
+        <a><img src="./media/6fac.png"></a>
+        <a><img src="./media/khai.png"></a>
+    </section>
+</body>
+
+</html>

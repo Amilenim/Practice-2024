@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя ознайомча практика</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/scripts.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <h2>Моя Ознайомча практика 2024</h2>
+        <div class="navbar">
+            <div class="button">
+                <button type="button" class="btn btn-dark" onclick="location.href='/index.html'">Головна</button>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 1
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc1.1.html">Завдання 1.1</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.2.html">Завдання 1.2</a></li>
+                    <li><a class="dropdown-item" href="/tasc1.3.html">Завдання 1.3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Завдання 2
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="/tasc2.1.html">Теорія</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.2.html">Програма</a></li>
+                    <li><a class="dropdown-item" href="/tasc2.3.html">Тестування</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <h2>Завдання 2</h2>
+        <p>Ознайомитися з одним із чисельних методів (таблиця 1) та виконати його реалізацію мовою
+            програмування високого рівня (за винятком Basic, Pascal, Fortran), засобами програмування
+            Scilab та перевірити правильність отриманих програмних рішень за допомогою інших засобів Scilab.</p>
+        <p class="text"> <b>ВАРІАНТ 2 <br><br></b></p>
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Чисельний метод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Метод дихотомії обчислити один із коренів рівняння \( f(x) = 0 \) з точністю \( \varepsilon =
+                        10^{-6} \)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">№ варіанта Чисельний метод Нелінійне рівняння
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">\( x^3-3*x^2+3=0 \)</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><b>Результати виконання програми на C#:</b></p>
+
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Інтервал [a, b]</th>
+                    <td><b>Scilab</b></td>
+                    <td><b>C#</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>[-10, -8]</td>
+                    <td><b>Синтаксична помилка</b></td>
+                    <td><b>Синтаксична помилка</b></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>[10, 20]</td>
+                    <td>Синтаксична помилка</td>
+                    <td>Синтаксична помилка</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>[T]</td>
+                    <td>Помилка формата</td>
+                    <td>Помилка формата</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>[-10, 20]</td>
+                    <td>-0,879385</td>
+                    <td>-0,879385</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>[-100, 200]</td>
+                    <td>-0,879385</td>
+                    <td>-0,879386</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="media">
+            <a><img src="./media/2/2.1C.png"></a>
+            <p>Рисунок 1 - Тест 1 C#</p>
+            <a><img src="./media/2/2.1Scilab.png"></a>
+            <p>Рисунок 2 - Тест 1 Scilab</p>
+        </div>
+
+        <div class="media">
+            <a><img src="./media/2/2.2C.png"></a>
+            <p>Рисунок 3 - Тест 2 C#</p>
+            <a><img src="./media/2/2.2Scilab.png"></a>
+            <p>Рисунок 4 - Тест 2 Scilab</p>
+        </div>
+
+        <div class="media">
+            <a><img src="./media/2/2.3C.png"></a>
+            <p>Рисунок 5 - Тест 3 C#</p>
+            <a><img src="./media/2/2.3Scilab.png"></a>
+            <p>Рисунок 6 - Тест 3 Scilab</p>
+        </div>
+
+        <div class="media">
+            <a><img src="./media/2/2.4C.png"></a>
+            <p>Рисунок 7 - Тест 4 C#</p>
+            <a><img src="./media/2/2.4Scilab.png"></a>
+            <p>Рисунок 8 - Тест 4 Scilab</p>
+        </div>
+
+        <div class="media">
+            <a><img src="./media/2/2.5C.png"></a>
+            <p>Рисунок 9 - Тест 5 C#</p>
+            <a><img src="./media/2/2.5Scilab.png"></a>
+            <p>Рисунок 10 - Тест 5 Scilab</p>
+        </div>
+
+        <p><b>Висновок</b></p>
+        <p>Порівнюючи отримані результаті у Scilab та C#, відповіді ідентичні в усіх тестах. Можливі похибки можуть
+            виникнути при 9-10 знаках після коми.</p>
+    </section>
+
+    <section class="footer">
+        <a><img src="./media/6fac.png"></a>
+        <a><img src="./media/khai.png"></a>
+    </section>
+</body>
+
+</html>
